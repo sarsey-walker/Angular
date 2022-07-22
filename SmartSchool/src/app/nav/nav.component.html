@@ -2,11 +2,12 @@
     <div class="container-fluid">
       <a routerLink="dashboard" class="navbar-brand text-light">Home</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" id="collapseBasic" [collapse]="isCollapsed">
         <div class="navbar-nav">
           <a routerLink="professores" routerLinkActive="active" class="nav-link text-light">Professores</a>
           <a routerLink="alunos" routerLinkActive="active" class="nav-link text-light">Alunos</a>
@@ -16,3 +17,11 @@
       </div>
     </div>
   </nav>
+
+  <!-- <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+</button>
+<hr>
+<div id="collapseBasic" [collapse]="isCollapsed">
+<div class="well well-lg card card-block card-header">Some content</div>
+</div> -->

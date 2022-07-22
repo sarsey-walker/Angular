@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
+## Errors
+
+I was having issues installing `ngx-bootstrap` components.
+Something like ` Package "ngx-bootstrap" was found but does not support schematics `
+
+I found out that currently `ngx-bootstrap` is not compatible with angular 14. But you can force the installation by ignoring all peerDependencies when installing
+
+`npm install ngx-bootstrap@latest --legacy-peer-deps`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
