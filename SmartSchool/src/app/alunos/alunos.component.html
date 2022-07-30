@@ -1,21 +1,29 @@
-<!-- This var needs to be 'Input() to be like this'-->
-<app-titulo [titulo]="titulo"></app-titulo>
 
-<table class="table table-dark table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Sobrenome</th>
-        <th scope="col">Tel</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let aluno of alunos">
-        <th scope="row">{{aluno.id}}</th>
-        <td>{{aluno.nome}}</td>
-        <td>{{aluno.sobrenome}}</td>
-        <td>{{aluno.telefone}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div *ngIf="alunoSelecionado">
+  <app-titulo [titulo]="'Aluno: ' + alunoSelecionado"></app-titulo>
+  <br>
+  <button class="btn btn-default bg-light" (click)="voltar()">Voltar</button>
+</div>
+
+<div *ngIf="!alunoSelecionado">
+  <!-- This var needs to be 'Input() to be like this'-->
+  <app-titulo [titulo]="titulo"></app-titulo>
+  <table class="table table-dark table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Sobrenome</th>
+          <th scope="col">Tel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let aluno of alunos" style="cursor: pointer;" (click)="selectAluno(aluno)">
+          <th scope="row">{{aluno.id}}</th>
+          <td>{{aluno.nome}}</td>
+          <td>{{aluno.sobrenome}}</td>
+          <td>{{aluno.telefone}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
