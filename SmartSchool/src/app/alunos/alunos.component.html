@@ -1,8 +1,26 @@
 
 <div *ngIf="alunoSelecionado">
-  <app-titulo [titulo]="'Aluno: ' + alunoSelecionado"></app-titulo>
-  <br>
-  <button class="btn btn-default bg-light" (click)="voltar()">Voltar</button>
+  <div class="row">
+    <div class="col-sm-11 mr-auto">
+      <app-titulo [titulo]="'Aluno: ' + alunoSelecionado.nome"></app-titulo> </div>
+    <div class="col-sm-1 mr-auto"> 
+      <button class="btn btn-default bg-light" (click)="voltar()">Voltar</button></div>
+  </div>
+  <form>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Nome</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Sobrenome</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Tel</label>
+        <input type="text" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Atualizar</button>
+  </form>
 </div>
 
 <div *ngIf="!alunoSelecionado">
