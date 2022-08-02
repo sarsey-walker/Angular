@@ -15,20 +15,20 @@
         <button class="btn btn-outline-danger mt-2" (click)="voltar()">Fechar</button>
       </div>
     </div>
-    <form>
+    <form [formGroup]="alunoForm" (submit)="alunoSubmit()">
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Nome</label>
-        <input type="text" value="{{alunoSelecionado.nome}}" class="form-control">
+        <input type="text" formControlName="nome" class="form-control">
       </div>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Sobrenome</label>
-        <input type="text" value="{{alunoSelecionado.sobrenome}}" class="form-control">
+        <input type="text" formControlName="sobrenome" class="form-control">
       </div>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Tel</label>
-        <input type="text" value="{{alunoSelecionado.telefone}}" class="form-control">
+        <input type="text" formControlName="telefone" class="form-control">
       </div>
-      <button type="submit" class="btn btn-primary">Atualizar</button>
+      <button type="submit" class="btn btn-primary" [disabled]="!alunoForm.valid">Atualizar</button>
     </form>
   </div>
 

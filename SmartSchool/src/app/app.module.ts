@@ -12,7 +12,7 @@ import { TituloComponent } from './titulo/titulo.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
-    FormsModule // To use ngModel
+    FormsModule, // To use ngModel
+    ReactiveFormsModule // reactivefomr
   ],
   providers: [],
   bootstrap: [AppComponent]
