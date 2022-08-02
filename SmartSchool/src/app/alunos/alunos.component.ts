@@ -8,6 +8,7 @@ import { Aluno } from '../models/Aluno';
 })
 export class AlunosComponent implements OnInit {
 
+  textSample?:string
   titulo = 'Alunos'
   alunoSelecionado?: Aluno;
   alunos = [

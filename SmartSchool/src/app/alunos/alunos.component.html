@@ -1,3 +1,10 @@
+
+<!-- two way databind -->
+<div class="row">
+  <input type="text" [(ngModel)]="textSample">
+  <p>{{textSample}}</p>
+</div>
+
 <div class="row">
   <div class="col-sm-6" *ngIf="alunoSelecionado">
     <div class="row">
