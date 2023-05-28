@@ -8,6 +8,7 @@ import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
 import { FormsModule } from '@angular/forms';
+import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     ProductListComponent,
     ProductImageComponent,
     ProductDepartmentComponent,
-    PriceDisplayComponent
+    PriceDisplayComponent,
+    DemoFormSkuComponent
   ],
   imports: [
     BrowserModule,FormsModule
