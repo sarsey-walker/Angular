@@ -7,7 +7,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
     DemoFormSkuComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
